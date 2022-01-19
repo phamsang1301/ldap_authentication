@@ -1,0 +1,103 @@
+dn: dc=asm,dc=com
+objectClass: top
+objectClass: domain
+objectClass: extensibleObject
+dc: asm
+
+dn: ou=people,dc=asm,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=asm,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: groups
+
+dn: uid=tinh,ou=people,dc=asm,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: customPerson
+uid: tinh
+userPassword: $2a$10$HB0glkSqSOQ.oPCaxX1gveB18OFlYEx.UJ3iH51wsoiCkj.qfT79e
+cn: Tran Phuong Tinh
+givenName: Tinh
+sn: Tran Phuong
+gender: male
+mail: tinh@asm.com
+
+dn: uid=sang,ou=people,dc=asm,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: customPerson
+uid: sang
+userPassword: $2a$10$L0jPzPTEO4fhrXVTBTq.FOF4GWuylqL5qGmTOAzg/suuiw9x0PGcG
+cn: Pham Ngoc Sang
+givenName: Sang
+sn: Pham Ngoc
+gender: male
+mail: sang@asm.com
+
+dn: uid=an,ou=people,dc=asm,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: customPerson
+uid: an
+userPassword: $2a$10$WdMY8CwxAsLOCDm9v8UU3.yXys6klKwlNKVdBqlFEut0rkyHYOm6.
+cn: Do Le Thien An
+givenName: An
+sn: Do Le Thien
+gender: male
+mail: an@asm.com
+
+dn: uid=anne,ou=people,dc=asm,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: customPerson
+uid: anne
+userPassword: $2a$10$KJrswQctuYS42ZspE2Ok0uwCVQc.c5wdMmQtET6XYvVv1vV9n7ePK
+cn: Anne Hathaway
+givenName: Anne
+sn: Hathaway
+gender: female
+mail: anne@asm.com
+
+dn: uid=john,ou=people,dc=asm,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: customPerson
+uid: john
+userPassword: $2a$10$3hZLWwdKmupFqclsRZSdq.YuEptBAYJBh5hai5UZzAhpSUTSCA6qC
+cn: John Hamilton
+givenName: John
+sn: Hamilton
+gender: male
+mail: john@asm.com
+
+dn: cn=user,ou=groups,dc=asm,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: user
+uniqueMember: uid=tinh,ou=people,dc=asm,dc=com
+uniqueMember: uid=sang,ou=people,dc=asm,dc=com
+uniqueMember: uid=an,ou=people,dc=asm,dc=com
+uniqueMember: uid=anne,ou=people,dc=asm,dc=com
+uniqueMember: uid=john,ou=people,dc=asm,dc=com
+
+dn: cn=admin,ou=groups,dc=asm,dc=com
+objectClass: top
+objectClass: groupOfUniqueNames
+cn: admin
+uniqueMember: uid=tinh,ou=people,dc=asm,dc=com
+uniqueMember: uid=sang,ou=people,dc=asm,dc=com
+uniqueMember: uid=an,ou=people,dc=asm,dc=com
