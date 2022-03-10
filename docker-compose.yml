@@ -14,16 +14,17 @@ services:
     hostname: back-end
     networks:
       - ldap
+    ports:
+      - 8080:8080
     depends_on:
       - db
   db:
-    image: phpmyadmin/phpmyadmin
-    environment:
-      - MYSQL_ROOT_PASSWORD=123
+    image: postgres
+    restart: always
     networks:
       - ldap
     ports:
-      - 9000:80
+      - 5432:5432
 networks:
   ldap:
     driver: bridge

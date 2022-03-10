@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ldap-auth-deploy
+  labels:
+    tier: front-end
+    app: ldap-auth-app
+spec:
+  selector:
+    matchLabels:
+      app: ldap-auth-app
+  replicas: 4
+  template:
+    metadata:
+      name: ldap-auth-fe-pod
+      labels:
+        app: ldap-auth-app
+    spec:
+      containers:
+        - name: ldap-fe
+          image: ldap_authentication_front-end
