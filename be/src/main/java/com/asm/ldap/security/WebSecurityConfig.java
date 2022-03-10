@@ -125,7 +125,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         .groupSearchBase("ou=groups")
         .groupSearchFilter("uniqueMember={0}")
         .contextSource()
-          .url("ldap://192.168.134.129:389/dc=asm,dc=com")
+          .url("ldap://10.0.0.137:389/dc=asm,dc=com")
           .and()
         .passwordCompare()
           .passwordEncoder(new BCryptPasswordEncoder())
