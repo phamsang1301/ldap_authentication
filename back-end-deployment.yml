@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ldap-auth-deploy
+  name: ldap-auth-be-deploy
   labels:
-    tier: front-end
+    tier: back-end
     app: ldap-auth-app
 spec:
   selector:
     matchLabels:
-      tier: front-end
+      tier: back-end
       app: ldap-auth-app
   replicas: 4
   template:
     metadata:
-      name: ldap-auth-fe-pod
+      name: ldap-auth-be-pod
       labels:
-        tier: front-end
+        tier: back-end
         app: ldap-auth-app
     spec:
       containers:
-        - name: ldap-fe
-          image: sangpn1/ldap-fe:latest
+        - name: ldap-be
+          image: sangpn1/ldap-be:latest

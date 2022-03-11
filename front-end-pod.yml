@@ -7,9 +7,5 @@ metadata:
     type: front-end
 spec:
   containers:
-    - name: ldap-auth-fe
-      image: ldap_authentication_front-end
-      imagePullPolicy: Never
-      ports:
-        - containerPort: 80
-  restartPolicy: Never
+    - name: ldap-fe
+      image: sangpn1/ldap-fe:latest
