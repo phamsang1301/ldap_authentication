@@ -3,9 +3,11 @@ kind: Service
 metadata:
   name: backend-service
 spec:
+  type: NodePort
   ports:
     - targetPort: 8080
-      port: 8080
+      port: 80
+      nodePort: 8080
   selector:
     tier: back-end
     app: ldap-auth-app
